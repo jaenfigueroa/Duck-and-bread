@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+/*/////////////////////////*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(255, 205, 111);
+  /* background-color: #4f8163; */
+  background-color: #ffc500;
+  background-color: #ffce2b;
+  overflow: hidden;
+}
+
+.referencias {
+  width: 900px;
+  height: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  /* background-color: rgba(255, 0, 0, 0.408); */
+}
+.referencias .area {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  /* border: 1px solid black; */
+  z-index: 2;
+}
+
+.cara {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ojo {
+  width: 130px;
+  height: 200px;
+  background-color: #e1e8ed;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ojo:before {
+  content: '';
+  background-color: #ffbc3f;
+  background-color: #3d6b50;
+  background-color: #ffaa01;
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  top: -100%;
+  animation: abajo 4s linear infinite alternate-reverse;
+  z-index: 1;
+}
+
+@keyframes abajo {
+  0% {
+    top: -100%;
+  }
+  95% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.pupila {
+  width: 60px;
+  height: 60px;
+  background-color: #7380c0;
+  border-radius: 50%;
+  transition: transform 0.7s;
+  position: relative;
+  box-shadow: 2px -2px 0 5px #4d5da8 inset, -2px 0px 0 5px #c2c7e848 inset;
+}
+
+.pupila:after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-color: #121b3c;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(100% / 2 - 11px);
+  left: calc(100% / 2 - 11px);
+}
+.pupila:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 50%;
+  top: calc(100% / 2 - 20px);
+  left: calc(100% / 2 + 2px);
+  z-index: 1;
+}
+
+.pico {
+  width: 100px;
+  height: 110px;
+  background-color: #ff6939;
+  background-color: #ff621f;
+  position: absolute;
+  top: 200px;
+  /* left: 25px; */
+  left: 100px;
+  border-radius: 15px;
+  transform: rotateZ(-54deg) skewY(20deg);
+  border-bottom: 5px solid rgb(214, 83, 35);
+  border-left: 5px solid rgb(214, 83, 35);
+
+  border-bottom: 5px solid #cd4218;
+  border-left: 5px solid #cd4218;
+
+  box-sizing: content-box;
+}
+
+.pico:after {
+  content: '';
+  width: 20px;
+  height: 8px;
+  background-color: rgb(214, 83, 35);
+  background-color: #cd4218;
+  position: absolute;
+  border-radius: 50%;
+  left: 30px;
+  top: 25px;
+  transform: rotateZ(110deg);
+}
+.pico:before {
+  content: '';
+  width: 20px;
+  height: 8px;
+  background-color: rgb(214, 83, 35);
+  background-color: #cd4218;
+  position: absolute;
+  border-radius: 50%;
+  left: 65px;
+  top: 60px;
+  transform: rotateZ(-20deg);
+}
+
+.area1:hover ~ .cara .ojo .pupila {
+  transform: translate(-20px, -40px);
+}
+
+.area2:hover ~ .cara .ojo .pupila {
+  transform: translate(-0px, -50px);
+}
+
+.area3:hover ~ .cara .ojo .pupila {
+  transform: translate(20px, -40px);
+}
+
+.area4:hover ~ .cara .ojo .pupila {
+  transform: translate(-30px, 0px);
+}
+
+.area5:hover ~ .cara .ojo .pupila {
+  transform: translate(0px, 0px);
+}
+
+.area6:hover ~ .cara .ojo .pupila {
+  transform: translate(30px, 0px);
+}
+
+.area7:hover ~ .cara .ojo .pupila {
+  transform: translate(-20px, 40px);
+}
+
+.area8:hover ~ .cara .ojo .pupila {
+  transform: translate(-0px, 55px);
+}
+
+.area9:hover ~ .cara .ojo .pupila {
+  transform: translate(20px, 45px);
+}
+
+.pan {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./assets/pan.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
