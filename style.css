@@ -134,7 +134,6 @@ main {
   background-color: var(--naranja-1);
   position: absolute;
   top: 200px;
-  /* left: 25px; */
   left: 100px;
   border-radius: 15px;
   transform: rotateZ(-54deg) skewY(20deg);
