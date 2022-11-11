@@ -1,3 +1,15 @@
+:root {
+  --amarillo-1: #ffce2b;
+  --amarillo-2: #ffaa01;
+  --naranja-1: #ff621f;
+  --naranja-2: #cd4218;
+  --azul-1: #e1e8ed;
+  --azul-2: #8a94cc;
+  --azul-3: #7380c0;
+  --azul-4: #4d5da8;
+  --azul-5: #121b3c;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,10 +28,7 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(255, 205, 111);
-  /* background-color: #4f8163; */
-  background-color: #ffc500;
-  background-color: #ffce2b;
+  background-color: var(--amarillo-1);
   overflow: hidden;
 }
 
@@ -30,7 +39,6 @@ main {
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
-  /* background-color: rgba(255, 0, 0, 0.408); */
 }
 .referencias .area {
   width: calc(100% / 3);
@@ -54,7 +62,7 @@ main {
 .ojo {
   width: 130px;
   height: 200px;
-  background-color: #e1e8ed;
+  background-color: var(--azul-1);
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -65,9 +73,7 @@ main {
 
 .ojo:before {
   content: '';
-  background-color: #ffbc3f;
-  background-color: #3d6b50;
-  background-color: #ffaa01;
+  background-color: var(--amarillo-2);
   width: 250px;
   height: 200px;
   position: absolute;
@@ -92,18 +98,19 @@ main {
 .pupila {
   width: 60px;
   height: 60px;
-  background-color: #7380c0;
+  background-color: var(--azul-3);
   border-radius: 50%;
   transition: transform 0.7s;
   position: relative;
-  box-shadow: 2px -2px 0 5px #4d5da8 inset, -2px 0px 0 5px #c2c7e848 inset;
+  box-shadow: 2px -2px 0 5px var(--azul-4) inset,
+    -2px 0px 0 5px var(--azul-2) inset;
 }
 
 .pupila:after {
   content: '';
   width: 22px;
   height: 22px;
-  background-color: #121b3c;
+  background-color: var(--azul-5);
   position: absolute;
   border-radius: 50%;
   top: calc(100% / 2 - 11px);
@@ -124,19 +131,15 @@ main {
 .pico {
   width: 100px;
   height: 110px;
-  background-color: #ff6939;
-  background-color: #ff621f;
+  background-color: var(--naranja-1);
   position: absolute;
   top: 200px;
   /* left: 25px; */
   left: 100px;
   border-radius: 15px;
   transform: rotateZ(-54deg) skewY(20deg);
-  border-bottom: 5px solid rgb(214, 83, 35);
-  border-left: 5px solid rgb(214, 83, 35);
-
-  border-bottom: 5px solid #cd4218;
-  border-left: 5px solid #cd4218;
+  border-bottom: 5px solid var(--naranja-2);
+  border-left: 5px solid var(--naranja-2);
 
   box-sizing: content-box;
 }
@@ -145,20 +148,19 @@ main {
   content: '';
   width: 20px;
   height: 8px;
-  background-color: rgb(214, 83, 35);
-  background-color: #cd4218;
+  background-color: var(--naranja-2);
   position: absolute;
   border-radius: 50%;
   left: 30px;
   top: 25px;
   transform: rotateZ(110deg);
 }
+
 .pico:before {
   content: '';
   width: 20px;
   height: 8px;
-  background-color: rgb(214, 83, 35);
-  background-color: #cd4218;
+  background-color: var(--naranja-2);
   position: absolute;
   border-radius: 50%;
   left: 65px;
